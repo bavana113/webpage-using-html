@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE BOOKS STORE</title>
+    </head>
+
+    <h1> ONLINE BOOKS STORE</h1>
+    <p style="color:black"><i>Buy books online at best prices in India.<br> Find all your favourite authors and titles at great prices.</i></p>
+    <style>
+        body {
+            background-image: url("C:/Users/manasa/OneDrive/Desktop/dd/images (2).jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: Arial, sans-serif;
+            align-content: center;
+            margin: 150px;
+            padding: 0;
+            
+        }
+        .container {
+            margin-top: 0%;
+        }
+        select {
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        option {
+            background: white;
+            color: black;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <select id="states">
+                <option value="BRANCH">BRANCH</option>
+                <option value="Computer Science">Computer Science </option>
+                <option value="Electronics & Communication">Electronics & Communication</option>
+                <option value="Information Technology">Information Technology</option>
+            </select>
+        </div>
+        <div id="information-container"></div>
+    </div>
+
+    <script>
+        const states = document.getElementById('states');
+        const informationContainer = document.getElementById('information-container');
+
+        states.addEventListener('change', (e) => {
+            const selectedState = e.target.value;
+            displayInformation(selectedState);
+        });
+
+        function displayInformation(state) {
+            switch (state) {
+                case 'BRANCH':
+                    informationContainer.innerHTML = `
+                        <h2>Branch</h2>
+                        <p>Select your branch to explore books.</p>
+                    `;
+                    break;
+                case 'Computer Science':
+                    informationContainer.innerHTML = `
+                        <h2>Computer Science</h2>
+                        <p>Explore books on computer science, programming, and software engineering.
+                            <table width=90% align="center" bgcolor="#ffe1bf"> 
+                    <tbody bgcolor="#ff6600"> 
+                    <th width="25%"><hr>BOOK<hr></th> 
+                    <th width="35%"><hr>DETAILS<hr></th> 
+                    <th width="20%"><hr>PRICE<hr></th> 
+                    <th width="20%"><hr>OPTION<hr></th></tbody> 
+                    <tbody align="center"> 
+                    <tr> 
+                    <td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/c.lang.jpg" width="90" height="120" ></td> 
+                    <td align="center"> Title: C - Programming<br> Author: E.Balaguru Swamy <br/> 
+                    Publicher:Tata Mc.Grawhill</td> 
+                    <td align="center">Rs. 1200/-</td> 
+                    <td align="center"> <input type="button" value="Add to cart"></td> 
+                    </tr> 
+                    <tr> 
+                    <td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/cn.jpg" width="90" height="120"></td> 
+                    <td align="center"> Title: Computer Networks<br>Author: M.Ananda Rao r<br/> 
+                    Publicher:ARS Publications</td> 
+                    <td align="center">Rs. 1000/-</td> 
+                    <td align="center"> <input type="button" value="Add to cart"></td> 
+                    </tr> 
+                    <tr> 
+                    <td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/java.jpg" width="90" height="120" ></td> 
+                    <td 
+                    align="center"> Title: Java Programming<br/>Author: Jhanaki Ramaya
+                    <br/>Publicher:Matches Publications</td> 
+                    <td align="center">Rs. 2300/-</td> 
+                    <td align="center"> <input type="button" value="Add to cart"></td> 
+                    </tr>  
+                    <tr> 
+                    <td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/web technologies.jpg" width="90" height="120" ></td> 
+                    <td align="center"> Title: Web Technologies<br/>Author: Uttam K.Roy 
+                    <br/>Publicher:Oxpord Publications</td> 
+                    <td align="center">Rs. 3000/-</td> 
+                    <td align="center"> <input type="button" value="Add to cart"></td> 
+                    </tr> 
+                    </tbody> 
+                    </table></p>
+                    `;
+                    break;
+                case 'Electronics & Communication':
+                    informationContainer.innerHTML = `
+                        <h2>Electronics & Communication</h2>
+                        <p>Explore books on electronics, communication, and related fields.
+                            <table width=90% align="center" bgcolor="#c4c4ff"> 
+<tbody bgcolor="#5b5bff"> 
+<th width="25%"><hr>BOOK<hr></th> 
+<th width="35%"><hr>DETAILS<hr></th> 
+<th width="20%"><hr>PRICE<hr></th> 
+<th width="20%"><hr>OPTION<hr></th></tbody> 
+<tbody align="center"> 
+<tr> 
+<td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/adc.jpg" width="90" height="120" ></td> 
+<td align="center"> Title: Analog Digital Communications <br> Author: Meru Babu 
+<br/> 
+Publicher:Schuem Outlines</td> 
+<td align="center">Rs. 1200/-</td> 6+
+<td align="center"> <input type="button" value="Add to cart"></td> 
+</tr>  
+<tr> 
+<td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/at.jpg" width="90" height="120"></td> 
+<td 
+align="center"> Title: Anntena Theory<br>Author: M.Dileep Kumar 
+r<br/>Publicher:BRS Publications</td> 
+<td align="center">Rs. 800/-</td> 
+<td align="center"> <input type="button" value="Add to cart"></td> 
+</tr> 
+<tr> 
+<td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/gate.jpg" width="90" height="120" ></td> 
+<td 
+align="center"> Title: Gate Study Metireal<br/>Author: Bill Joy 
+<br/>Publicher:Pearson Publications</td> 
+<td align="center">Rs. 8200/-</td> 
+<td align="center"> <input type="button" value="Add to cart"></td> 
+</tr> 
+</tbody> 
+</table></p>
+                    `;
+                    break;
+                case 'Information Technology':
+                    informationContainer.innerHTML = `
+                        <h2>Information Technology</h2>
+                        <p>Explore books on information technology, data science, and related fields.
+                            <table width=90% align="center" bgcolor="#bfffbf"> 
+<tbody bgcolor="#03f515"> 
+<th width="25%"><hr>BOOK<hr></th> 
+<th width="35%"><hr>DETAILS<hr></th> 
+<th width="20%"><hr>PRICE<hr></th> 
+<th width="20%"><hr>OPTION<hr></th></tbody> 
+<tbody align="center"> 
+<tr> 
+<td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/c.lang.jpg" width="90" height="120" ></td> 
+<td align="center"> Title: Let Us C <br> Author: Yeswant kanetkar <br/> 
+Publicher:Tata Mc.Grawhill</td> 
+<td align="center">Rs. 4200/-</td> 
+<td align="center"> <input type="button" value="Add to cart"></td> 
+</tr> 
+<tr> 
+<td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/py.jpg" width="90" height="120"></td> 
+<td align="center"> Title: Python Programming<br>Author: M.Kiran Kumar 
+r<br/>Publicher:ARS Publications</td> 
+<td align="center">Rs. 1100/-</td> 
+<td align="center"> <input type="button" value="Add to cart"></td> 
+</tr> 
+<tr> 
+<td align="center"><img src="C:/Users/manasa/OneDrive/Desktop/dd/web programming.jpg" width="90" height="120" ></td> 
+<td 
+align="center"> Title: Web Programming<br/>Author: Uttam K.Roy 
+<br/>Publicher:Oxpord Publications</td> 
+<td align="center">Rs. 6200/-</td> 
+<td align="center"> <input type="button" value="Add to cart"></td> 
+</tr> 
+</tbody> 
+</table></p>
+                    `;
+                    break;
+                default:
+                    console.log('Invalid state');
+            }
+        }
+    </script>
+
+</body>  
+</html>
